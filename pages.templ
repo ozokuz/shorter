@@ -1,0 +1,21 @@
+package main
+
+templ IndexPage() {
+	<div>
+		<h1 class="text-4xl font-bold pb-8 text-center">Shorter - URL Shortener</h1>
+		<form method="post">
+			<label class="text-xl font-semibold">
+				Enter a URL to shorten:
+				<input type="url" name="url" class="bg-zinc-700 rounded text-base font-normal p-2 mx-2 md:w-[20dvw]" required/>
+			</label>
+			<button type="submit" class="bg-blue-500 rounded px-4 py-2 font-semibold">Shorten</button>
+		</form>
+	</div>
+}
+
+templ SuccessPage(url string) {
+	<div>
+		<h1 class="text-4xl font-bold pb-8 text-center">Shorter - URL Shortener</h1>
+		<p class="text-xl font-semibold text-center">Your shortened URL is: <a href={ templ.URL(url) } class="text-blue-500">{ url }</a></p>
+	</div>
+}

@@ -1,0 +1,17 @@
+{
+  "name": "shorter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "run": "go run .",
+    "start": "./bin/shorter",
+    "dev:css": "tailwindcss -w -i tailwind.css -o public/styles.css -m",
+    "dev:template": "templ generate --watch",
+    "build": "tailwindcss -i tailwind.css -o public/styles.css -m && templ generate && go build -o bin/shorter"
+  },
+  "author": "ozokuz",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
